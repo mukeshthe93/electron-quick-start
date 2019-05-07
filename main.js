@@ -21,6 +21,7 @@ function createWindow () {
   let image1 = nativeImage.createFromPath(path.join(__dirname, 'close_img.png'))
   console.log(image1.toDataURL())
   //Issue is not seen with the below image
+  console.log("Image 2 log -----------------------------------------")
   let image2 = nativeImage.createFromPath(path.join(__dirname, 'close.png'))
   console.log(image2.toDataURL())
   // and load the index.html of the app.
