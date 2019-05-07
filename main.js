@@ -14,7 +14,13 @@ function createWindow () {
       nodeIntegration: true
     }
   })
-
+  
+  //Issue is seen with the below image as DataURL is empty.
+  let image1 = nativeImage.createFromPath(path.join(__dirname, 'close_img.png'))
+  console.log(image1.toDataURL())
+  //Issue is not seen with the below image
+  let image2 = nativeImage.createFromPath(path.join(__dirname, 'close.png'))
+  console.log(image2.toDataURL())
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
 
